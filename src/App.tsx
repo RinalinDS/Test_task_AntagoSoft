@@ -1,26 +1,44 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from 'react';
+import {v1} from 'uuid';
+import s from 'styles/App.module.css';
+import {AddPostForm} from 'components/AddPostForm/AddPostForm';
+import {Post} from 'components/Post/Post';
+import {useAppDispatch, useAppSelector} from 'hooks/useAppDispatchAndSelector';
+import {addNewPost} from 'store/reducers/postsSlice';
+import {PostType} from 'types';
+import {DateFunction, NameRandomizer} from 'utils';
+import {Header} from 'components/Header/Header';
+import {Reviews} from 'components/Reviews/Reviews';
+import {Services} from 'components/Services/Services';
 
-function App() {
+
+export const App: React.FC = () => {
+  const dispatch = useAppDispatch()
+  const posts = useAppSelector(state => state.posts)
+  const [newPostText, setNewPostText] = useState<string>('')
+
+  const addPost = () => {
+    const newPost: PostType = {
+      id: v1(),
+      message: newPostText,
+      name: NameRandomizer(),
+      date: DateFunction()
+    }
+    dispatch(addNewPost(newPost))
+  }
+
+  const mappedPosts = posts.map(m => <Post name={m.name} message={m.message} date={m.date} key={m.id}/>)
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={s.App}>
+      <Header/>
+      <Services/>
+      <Reviews/>
+      {mappedPosts}
+      <AddPostForm newPostText={newPostText} setNewPostText={setNewPostText} addPost={addPost}/>
     </div>
   );
 }
 
-export default App;
+

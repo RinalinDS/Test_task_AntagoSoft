@@ -1,0 +1,30 @@
+.reviewsContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px;
+}
+
+.reviewsTitle span {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.reviewsTitle a {
+    color: #005DA1;
+    margin-left: 10px;
+}
+
+.reviewsCount {
+    text-align: right;
+    width: 130px;
+}
+
+.reviewsCount span {
+    margin: 5px;
+}
+
+.reviewsCount img {
+    width: 15%;
+    vertical-align: bottom;
+}

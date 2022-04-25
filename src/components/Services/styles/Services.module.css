@@ -1,0 +1,83 @@
+.servicesWrapper {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.servicesContainer {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin: 5px;
+}
+
+.servicesTitle {
+    margin: 10px 20px 10px auto;
+}
+
+.servicesBlock {
+    border-top: 1px solid #DADADA;
+}
+
+.servicesGraph {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    margin: 10px;
+}
+
+.serviceCount {
+    font-weight: 700;
+    margin: 0 20px 0 20px;
+}
+
+.serviceItem1 {
+    width: 200px;
+    max-width: 200px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-left: 1px solid #DADADA;
+    background: #B1E19B;
+    margin: 2px 0 2px 0;
+}
+
+.serviceItem2 {
+    width: 50px;
+    max-width: 50px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-left: 1px solid #DADADA;
+    white-space: nowrap;
+    background: #ACE2F8;
+    margin: 2px 0 2px 0;
+}
+
+.serviceItem3 {
+    width: 25px;
+    max-width: 25px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-left: 1px solid #DADADA;
+    white-space: nowrap;
+    background: #ACE2F8;
+    margin: 2px 0 2px 0;
+}
+
+.serviceItemContainer {
+    display: flex;
+    justify-content: space-between;
+    line-height: 2;
+}
+
+.servicesGraphTotal {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #DADADA;
+    margin: 10px;
+}
+
+.servicesGraphTotal span {
+    margin: 10px 20px 0 0;
+    font-size: 20px;
+    font-weight: 700;
+}
