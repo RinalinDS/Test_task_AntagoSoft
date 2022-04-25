@@ -9,7 +9,7 @@ export const Reviews = () => {
     <div className={s.reviewsContainer}>
       <div className={s.reviewsTitle}>
         <span>{ReviewsInfo.Latest}</span>
-        <a href="">{ReviewsInfo.AllReviews}</a>
+        <span className={s.imitation}>{ReviewsInfo.AllReviews}</span>
       </div>
       <div className={s.reviewsCount}>
         <span><img src={likeIcon} alt="likeHeartIcon"/> {ReviewsInfo.LikesCount}</span>

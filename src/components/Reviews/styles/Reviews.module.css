@@ -10,9 +10,10 @@
     font-weight: 700;
 }
 
-.reviewsTitle a {
+.imitation {
     color: #005DA1;
     margin-left: 10px;
+    border-bottom: 1px solid #005DA1;
 }
 
 .reviewsCount {
